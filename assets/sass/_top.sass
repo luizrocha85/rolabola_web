@@ -1,0 +1,25 @@
+#top
+    position: fixed
+    background: #FFF
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25)
+    width: 100%
+    z-index: 99
+
+#nav
+    float: right
+    .menu
+        +clear
+        list-style: none
+        .option
+            float: left
+            margin-right: 2rem
+            margin-top: .8rem
+            &:last-child
+                margin-right: 0
+            &:first-child
+                margin-top: 0
+            .link
+                +font-size(16px)
+                font-weight: 300
+                color: $light-green
+                text-decoration: none

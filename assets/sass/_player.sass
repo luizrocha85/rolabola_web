@@ -1,0 +1,62 @@
+@keyframes go
+	0%
+		transform: translateX(0px)
+	50%
+		transform: translateX(5px)
+	100%
+		transform: translateX(0px)
+
+#player
+    background: url('../img/player-bg.jpg')
+    background-position: center center
+    background-size: cover
+    padding: 4rem 0
+    position: relative
+    &::before
+        position: absolute
+        content: ''
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: rgba(0,0,0, 0.5)
+        z-index: 2
+    .iphone,
+    .bullets
+        position: relative
+        z-index: 3
+    .iphone
+        .img
+            width: 100%
+    .bullets
+        list-style: none
+        margin: 0 auto
+        width: rem(12px)
+        margin-top: 10rem
+    .content
+        color: #FFF
+        position: relative
+        z-index: 3
+        & > .title
+            +font-size(40px)
+            font-weight: 300
+            margin-bottom: 3rem
+        .text
+            margin-bottom: 3rem
+            p
+                +font-size(20px)
+                font-weight: 300
+                line-height: 1.5
+                margin-bottom: 1.5rem
+                &:last-child
+                    margin-bottom: none
+        .btn
+            +font-size(20px)
+            .go
+                animation: go 1s ease-in-out infinite
+                margin-left: .5rem
+        .or
+            +font-size(24px)
+            font-weight: 300
+            display: inline-block
+            padding: 0 1rem

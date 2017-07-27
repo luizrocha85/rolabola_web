@@ -1,0 +1,42 @@
+#fields
+    background: #FFF
+    padding: 4rem 0
+    .title
+        +font-size(20px)
+        font-weight: 500
+        color: $medium-green
+        text-transform: uppercase
+    .all
+        +font-size(16px)
+        font-weight: 300
+        color: $medium-green
+        float: right
+        text-decoration: none
+    .fields
+        .field
+            .photo
+                border-radius: rem(3px)
+                height: rem(150px)
+                overflow: hidden
+                margin-bottom: 1rem
+                box-shadow: 0 4px 10px 0 rgba(0,0,0,0.3)
+                .img
+                    width: 100%
+            .location
+                margin-bottom: .5rem
+                .img
+                    margin-right: .2rem
+                    margin-top: -.5rem
+                h4
+                    +font-size(18px)
+                    font-weight: 300
+                    display: inline-block
+                    color: $medium-green
+            .times
+                .img
+                    margin-right: .2rem
+                    margin-top: -.3rem
+                span
+                    +font-size(16px)
+                    font-weight: 300
+                    color: $gray
