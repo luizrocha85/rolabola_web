@@ -100,7 +100,7 @@
                             <!-- /.col-6 -->
                             <div class="col-6">
                                 <div class="watch-video">
-                                    <button class="watch-btn">
+                                    <button class="watch-btn trigger-modal" data-modal="video-modal">
                                         <img src="img/play.png" alt="" class="img">
                                         <span>Ver el video</span>
                                     </button>
@@ -905,6 +905,18 @@
         <!-- /.wrapper -->
     </footer>
     <!-- /#footer -->
+
+    <div class="modal" id="video-modal">
+        <button class="close-modal">&times;</button>
+        <video poster="https://images.pexels.com/photos/114296/pexels-photo-114296.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
+            playsinline autoplay controls>
+            <source src="videos/hero.webm" type="video/webm">
+        </video>
+    </div>
+    <!-- /#vide-modal.modal -->
+
+    <div class="layer"></div>
+    <!-- /.layer -->
 
     <script type="text/javascript" src="js/scripts.js"></script>
 </body>
