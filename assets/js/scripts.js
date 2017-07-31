@@ -1,10 +1,19 @@
 $(function(){
+    var $root = $('html, body');
+    $('.scroll').click(function() {
+        $root.animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 500);
+        return false;
+    });
+
     var $body = $('body'),
         $window = $(window),
         $document = $(document);
 
     var top = $('#top'),
-        top_offset = top.offset();
+        top_offset = top.offset(),
+        scroll_button = $('#scroll-btn');
 
     $document.scroll(function(){
         var $this = $(this)
@@ -12,8 +21,10 @@ $(function(){
 
         if(scrollTop > top_offset.top){
             top.addClass('scrolled');
+            scroll_button.addClass('up').attr('href', '#hero');
         }else{
             top.removeClass('scrolled');
+            scroll_button.removeClass('up').attr('href', '#owner');
         }
     });
 
@@ -34,9 +45,11 @@ $(function(){
         });
 
         $('.bullet').click(function(){
-            var id = $(this).closest('ul').attr('id');
-                id = id.replace('-bullets', '');
-            syncFromIphone(id);
+            var $this = $(this),
+                id = $this.closest('ul').attr('id');
+                id = id.replace('-bullets', ''),
+                index = $this.index();
+            syncFromIphone(id, index);
         });
 
         iphone_slides.on('swipeEnd.glide', function(){
@@ -51,13 +64,15 @@ $(function(){
             syncFromInfo(id);
         });
 
-        function syncFromIphone(id) {
+        function syncFromIphone(id, index) {
             var iphone = $('#'+id+'-iphone'),
                 bullets = $('#'+id+'-bullets'),
                 info = $('#'+id+'-info'),
                 iphone_api = iphone.data('glide_api'),
                 info_api = info.data('glide_api'),
                 current_slide = iphone_api.current();
+
+            if(index != null) current_slide = index + 1;
 
             bullets.find('.bullet').eq(current_slide - 1).addClass('active').siblings().removeClass('active');
             info_api.go('='+current_slide);
@@ -75,5 +90,14 @@ $(function(){
             iphone_api.go('='+current_slide);
             info_api.go('='+current_slide);
         }
+    }
+
+    var fields_slides = $('#fields-slides');
+    if(fields_slides.length){
+        fields_slides.glide({
+            type: 'carousel',
+            autoplay: false,
+            keyboard: false
+        });
     }
 });

@@ -1,3 +1,19 @@
+@keyframes morein
+    from
+        +opacity(0)
+        transform: translateX(100px)
+    to
+        +opacity(1)
+        transform: translateX(0)
+
+@keyframes arrowin
+    from
+        +opacity(0)
+        transform: translateX(-150px)
+    to
+        +opacity(1)
+        transform: translateX(0)
+
 #fields
     background: #FFF
     padding: 4rem 0
@@ -13,13 +29,37 @@
         float: right
         text-decoration: none
     .fields
+        position: relative
+        .next
+            border: 0
+            cursor: pointer
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            width: 200px
+            background: none
+            z-index: 1
+            .img
+                display: none
+                position: absolute
+                top: 5.2rem
+                right: 4rem
+                pointer-events: none
+            &:hover
+                animation: morein .3s ease-in-out forwards
+                background: linear-gradient(-90deg, rgba($white, 1), rgba($white, 0))
+                .img
+                    animation: arrowin .3s ease-in-out forwards
+                    display: block
+                    pointer-events: none
         .field
             .photo
                 border-radius: rem(3px)
                 height: rem(150px)
                 overflow: hidden
                 margin-bottom: 1rem
-                box-shadow: 0 4px 10px 0 rgba(0,0,0,0.3)
+                box-shadow: 0 15px 10px -10px rgba($black,.35)
                 .img
                     width: 100%
             .location
