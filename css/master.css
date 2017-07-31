@@ -277,6 +277,21 @@ img {
     #top.scrolled .logo .img-white {
       display: none; }
 
+.toggle-responsive-nav {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  background: url("../img/menu.png") no-repeat center center;
+  width: 1.85714rem;
+  height: 1.42857rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 99; }
+
+#toggle-responsive-nav {
+  display: none; }
+
 #nav {
   float: right; }
   #nav .menu {
@@ -297,6 +312,31 @@ img {
         font-size: 1.14286rem;
         font-weight: 300;
         text-decoration: none; }
+
+@media only screen and (max-width: 767px) {
+  #nav {
+    display: none;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.8);
+    top: 0;
+    right: 0;
+    width: 95vw;
+    height: 100vh; }
+    #nav .menu {
+      clear: none;
+      width: 100%;
+      margin-top: 1.5rem;
+      padding-left: 2rem; }
+      #nav .menu .option {
+        float: none;
+        margin-bottom: 1rem;
+        margin-right: 0; }
+        #nav .menu .option .link {
+          color: #5CBF10; }
+  .toggle-responsive-nav {
+    display: block; }
+  #toggle-responsive-nav:checked + #nav {
+    display: block; } }
 
 @-webkit-keyframes float {
   0% {
@@ -376,7 +416,7 @@ img {
     border-radius: 50%;
     -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
-    z-index: 3;
+    z-index: 5;
     text-align: center; }
     #hero #scroll-btn .img {
       position: absolute;
@@ -393,14 +433,23 @@ img {
       background: rgba(92, 191, 16, 0.7);
       -webkit-box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.25);
               box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.25); }
+      @media only screen and (max-width: 768px) {
+        #hero #scroll-btn.up {
+          right: 1rem;
+          bottom: 1rem; } }
   #hero .iphone {
     -webkit-animation: float 2.3s ease-in-out infinite;
             animation: float 2.3s ease-in-out infinite;
     position: relative;
+    text-align: center;
     z-index: 3; }
+    #hero .iphone .img {
+      max-width: 100%; }
   #hero .content {
     position: relative;
     z-index: 3; }
+    #hero .content .row .col-6 {
+      padding: 0; }
     #hero .content > .title {
       font-size: 43px;
       font-size: 3.07143rem;
@@ -427,6 +476,60 @@ img {
         float: left; }
         #hero .content .download .download-badges .download-badge:first-child {
           margin-right: 1rem; }
+    #hero .content .watch-video {
+      padding-top: 1rem; }
+      #hero .content .watch-video .watch-btn {
+        font-size: 18px;
+        font-size: 1.28571rem;
+        font-family: "DIN Regular";
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 0.21429rem;
+        background: rgba(255, 255, 255, 0.2);
+        color: #FFFFFF;
+        padding: .5rem 1rem; }
+        #hero .content .watch-video .watch-btn:hover {
+          cursor: pointer;
+          background: rgba(255, 255, 255, 0.35);
+          -webkit-transition: background .2s ease-in-out;
+          transition: background .2s ease-in-out; }
+        #hero .content .watch-video .watch-btn .img {
+          margin-right: .5rem; }
+        #hero .content .watch-video .watch-btn span {
+          position: relative;
+          top: 2px; }
+  @media only screen and (max-width: 978px) {
+    #hero .content > .title {
+      font-size: 34px;
+      font-size: 2.42857rem; }
+    #hero .content .text {
+      margin-bottom: 2rem; }
+    #hero .content .row .col-6 {
+      width: 100%; }
+    #hero .content .download {
+      margin-bottom: 2rem; } }
+  @media only screen and (max-width: 900px) {
+    #hero .wrapper > .row > .col-4 {
+      width: 100%; }
+    #hero .wrapper > .row > .col-8 {
+      width: 100%; }
+    #hero .content {
+      text-align: center; }
+      #hero .content .row .col-6 {
+        width: 50%; }
+      #hero .content > .title {
+        font-size: 34px;
+        font-size: 2.42857rem; }
+      #hero .content .text {
+        margin-bottom: 3rem; }
+      #hero .content .download {
+        margin-bottom: 0; }
+        #hero .content .download .download-badges {
+          margin: 0 auto; } }
+  @media only screen and (max-width: 595px) {
+    #hero .content .row .col-6 {
+      width: 100%; }
+    #hero .content .download {
+      margin-bottom: 2rem; } }
 
 #bgvid {
   position: fixed;
@@ -486,14 +589,15 @@ img {
     position: relative;
     z-index: 3; }
   #owner .iphone {
-    position: relative; }
+    position: relative;
+    text-align: center; }
     #owner .iphone .img {
-      width: 100%; }
+      max-width: 100%; }
     #owner .iphone .glide {
       position: absolute;
-      top: 12.4%;
-      left: 11%;
-      width: 77.8%;
+      top: 12.3%;
+      left: 18%;
+      width: 63.8%;
       height: auto; }
   #owner .bullets {
     list-style: none;
@@ -537,6 +641,50 @@ img {
         -webkit-animation: go 1s ease-in-out infinite;
                 animation: go 1s ease-in-out infinite;
         margin-left: .5rem; }
+  @media only screen and (max-width: 1190px) {
+    #owner .iphone .glide {
+      top: 12.3%;
+      left: 18%;
+      width: 64.3%; } }
+  @media only screen and (max-width: 1185px) {
+    #owner .iphone .glide {
+      top: 12.3%;
+      left: 17.4%;
+      width: 64.7%; } }
+  @media only screen and (max-width: 1100px) {
+    #owner .iphone .glide {
+      top: 12.3%;
+      left: 14.9%;
+      width: 70%; } }
+  @media only screen and (max-width: 1024px) {
+    #owner .iphone .glide {
+      top: 12.3%;
+      left: 12.3%;
+      width: 75.7%; } }
+  @media only screen and (max-width: 768px) {
+    #owner .wrapper > .row > .col-4 {
+      width: 100%; }
+    #owner .wrapper > .row > .col-1 {
+      width: 100%; }
+      #owner .wrapper > .row > .col-1 .bullets {
+        clear: both;
+        content: '';
+        display: table;
+        width: auto;
+        margin: 0 auto; }
+        #owner .wrapper > .row > .col-1 .bullets .bullet {
+          float: left;
+          margin-right: .6rem; }
+          #owner .wrapper > .row > .col-1 .bullets .bullet:last-child {
+            margin-right: 0; }
+    #owner .wrapper > .row > .col-7 {
+      width: 100%; }
+    #owner .iphone .img {
+      width: 50%; }
+    #owner .iphone .glide {
+      top: 12.3%;
+      left: 11.1%;
+      width: 78%; } }
 
 @-webkit-keyframes morein {
   from {
@@ -644,8 +792,13 @@ img {
       overflow: hidden;
       margin-bottom: 1rem;
       -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.35);
-              box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.35); }
+              box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.35);
+      background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+      background: linear-gradient(white, black); }
       #fields .fields .field .photo .img {
+        visibility: visible;
+        filter: alpha(opacity=80);
+        opacity: 0.8;
         width: 100%; }
     #fields .fields .field .location {
       margin-bottom: .5rem; }
@@ -666,6 +819,12 @@ img {
       font-size: 1.14286rem;
       font-family: "DIN Light";
       color: #AFAEB4; }
+  @media only screen and (max-width: 768px) {
+    #fields .col-3 {
+      width: 50%; } }
+  @media only screen and (max-width: 540px) {
+    #fields .col-3 {
+      width: 100%; } }
 
 @keyframes go {
   0% {
@@ -698,14 +857,15 @@ img {
     position: relative;
     z-index: 3; }
   #player .iphone {
-    position: relative; }
+    position: relative;
+    text-align: center; }
     #player .iphone .img {
-      width: 100%; }
+      max-width: 100%; }
     #player .iphone .glide {
       position: absolute;
-      top: 12.4%;
-      left: 11%;
-      width: 77.8%;
+      top: 12.3%;
+      left: 18%;
+      width: 63.8%;
       height: auto; }
   #player .bullets {
     list-style: none;
@@ -755,6 +915,78 @@ img {
       font-weight: 300;
       display: inline-block;
       padding: 0 1rem; }
+  @media only screen and (max-width: 1190px) {
+    #player .iphone .glide {
+      top: 12.3%;
+      left: 18%;
+      width: 64.3%; } }
+  @media only screen and (max-width: 1185px) {
+    #player .iphone .glide {
+      top: 12.3%;
+      left: 17.4%;
+      width: 64.7%; } }
+  @media only screen and (max-width: 1100px) {
+    #player .iphone .glide {
+      top: 12.3%;
+      left: 14.9%;
+      width: 70%; } }
+  @media only screen and (max-width: 1024px) {
+    #player .iphone .glide {
+      top: 12.3%;
+      left: 12.3%;
+      width: 75.7%; } }
+  @media only screen and (max-width: 768px) {
+    #player .wrapper > .row > .col-4 {
+      width: 100%; }
+    #player .wrapper > .row > .col-1 {
+      width: 100%; }
+      #player .wrapper > .row > .col-1 .bullets {
+        clear: both;
+        content: '';
+        display: table;
+        width: auto;
+        margin: 0 auto; }
+        #player .wrapper > .row > .col-1 .bullets .bullet {
+          float: left;
+          margin-right: .6rem; }
+          #player .wrapper > .row > .col-1 .bullets .bullet:last-child {
+            margin-right: 0; }
+    #player .wrapper > .row > .col-7 {
+      width: 100%; }
+    #player .iphone .img {
+      width: 50%; }
+    #player .iphone .glide {
+      top: 12.3%;
+      left: 11.1%;
+      width: 78%; } }
+  @media only screen and (max-width: 768px) {
+    #player .wrapper > .row > .col-4 {
+      width: 100%; }
+    #player .wrapper > .row > .col-1 {
+      width: 100%; }
+      #player .wrapper > .row > .col-1 .bullets {
+        clear: both;
+        content: '';
+        display: table;
+        width: auto;
+        margin: 0 auto; }
+        #player .wrapper > .row > .col-1 .bullets .bullet {
+          float: left;
+          margin-right: .6rem; }
+          #player .wrapper > .row > .col-1 .bullets .bullet:last-child {
+            margin-right: 0; }
+    #player .wrapper > .row > .col-7 {
+      width: 100%; }
+    #player .iphone .img {
+      width: 50%; }
+    #player .iphone .glide {
+      top: 12.3%;
+      left: 11.1%;
+      width: 78%; } }
+  @media only screen and (max-width: 920px) {
+    #player #player-info .or {
+      display: block;
+      margin: 1rem 0; } }
 
 #games {
   background: #FFF;
@@ -859,7 +1091,6 @@ img {
       #games .games .game .content .join-btn {
         font-size: 20px;
         font-size: 1.42857rem;
-        font-weight: 300;
         float: left;
         margin-right: 1rem; }
       #games .games .game .content .time {
@@ -891,6 +1122,48 @@ img {
           font-size: 18px;
           font-size: 1.28571rem;
           font-weight: 300; }
+  @media only screen and (max-width: 1000px) {
+    #games .wrapper > .row > .col-5 {
+      width: 100%; }
+      #games .wrapper > .row > .col-5 .calendar {
+        width: 26rem;
+        margin: 0 auto; }
+    #games .wrapper > .row > .col-7 {
+      width: 100%; }
+      #games .wrapper > .row > .col-7 .games {
+        width: 80%;
+        margin: 0 auto; } }
+  @media only screen and (max-width: 768px) {
+    #games .wrapper > .row > .col-7 {
+      width: 100%; }
+      #games .wrapper > .row > .col-7 .games {
+        width: 100%; } }
+  @media only screen and (max-width: 659px) {
+    #games .wrapper > .row > .col-7 {
+      width: 100%; }
+      #games .wrapper > .row > .col-7 .games .game .content {
+        padding: 1rem;
+        text-align: center; }
+        #games .wrapper > .row > .col-7 .games .game .content .date {
+          display: none; }
+        #games .wrapper > .row > .col-7 .games .game .content .time {
+          width: 100%; }
+        #games .wrapper > .row > .col-7 .games .game .content .teams {
+          width: 100%; }
+        #games .wrapper > .row > .col-7 .games .game .content .availability {
+          width: 100%; }
+        #games .wrapper > .row > .col-7 .games .game .content .join-btn {
+          float: none;
+          margin-top: 1rem; } }
+  @media only screen and (max-width: 450px) {
+    #games .wrapper > .row > .col-5 {
+      width: 100%; }
+      #games .wrapper > .row > .col-5 .calendar {
+        width: 100%; }
+        #games .wrapper > .row > .col-5 .calendar > .row > .col-1 {
+          padding: .5rem 0; }
+        #games .wrapper > .row > .col-5 .calendar > .row > .col-10 {
+          padding: .5rem 0; } }
 
 #footer {
   background-image: linear-gradient(-133deg, #74BD18 0%, #40880A 100%);
@@ -934,6 +1207,16 @@ img {
       margin-right: .8rem; }
       #footer .social-networks .page:last-child {
         margin-right: 0; }
+  @media only screen and (max-width: 800px) {
+    #footer .wrapper > .row > .col-3 {
+      width: 50%; }
+    #footer .wrapper > .row > .col-2 {
+      width: 50%; } }
+  @media only screen and (max-width: 468px) {
+    #footer .wrapper > .row > .col-3 {
+      width: 100%; }
+    #footer .wrapper > .row > .col-2 {
+      width: 100%; } }
 
 .glide {
   position: relative;
