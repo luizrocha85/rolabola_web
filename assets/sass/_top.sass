@@ -31,7 +31,18 @@
                 display: block
             .img-white
                 display: none
-
+.toggle-responsive-nav
+    display: none
+    position: absolute
+    top: 50%
+    right: 1rem
+    background: url('../img/menu.png') no-repeat center center
+    width: rem(26px)
+    height: rem(20px)
+    transform: translateY(-50%)
+    z-index: 99
+#toggle-responsive-nav
+    display: none
 #nav
     float: right
     .menu
@@ -49,3 +60,27 @@
                 +font-size(16px)
                 font-weight: 300
                 text-decoration: none
++bp('max-width: 767px')
+    #nav
+        display: none
+        position: fixed
+        background: rgba($white, .8)
+        top: 0
+        right: 0
+        width: 95vw
+        height: 100vh
+        .menu
+            clear: none
+            width: 100%
+            margin-top: 1.5rem
+            padding-left: 2rem
+            .option
+                float: none
+                margin-bottom: 1rem
+                margin-right: 0
+                .link
+                    color: $light-green
+    .toggle-responsive-nav
+        display: block
+    #toggle-responsive-nav:checked + #nav
+        display: block

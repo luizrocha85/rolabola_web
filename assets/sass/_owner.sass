@@ -27,13 +27,14 @@
         z-index: 3
     .iphone
         position: relative
+        text-align: center
         .img
-            width: 100%
+            max-width: 100%
         .glide
             position: absolute
-            top: 12.4%
-            left: 11%
-            width: 77.8%
+            top: 12.3%
+            left: 18%
+            width: 63.8%
             height: auto
     .bullets
         list-style: none
@@ -74,3 +75,52 @@
                 .go
                     animation: go 1s ease-in-out infinite
                     margin-left: .5rem
+    +bp('max-width: 1190px')
+        .iphone
+            .glide
+                top: 12.3%
+                left: 18%
+                width: 64.3%
+    +bp('max-width: 1185px')
+        .iphone
+            .glide
+                top: 12.3%
+                left: 17.4%
+                width: 64.7%
+    +bp('max-width: 1100px')
+        .iphone
+            .glide
+                top: 12.3%
+                left: 14.9%
+                width: 70%
+    +bp('max-width: 1024px')
+        .iphone
+            .glide
+                top: 12.3%
+                left: 12.3%
+                width: 75.7%
+    +bp('max-width: 768px')
+        .wrapper
+            & > .row
+                & > .col-4
+                    width: 100%
+                & > .col-1
+                    width: 100%
+                    .bullets
+                        +clear
+                        width: auto
+                        margin: 0 auto
+                        .bullet
+                            float: left
+                            margin-right: .6rem
+                            &:last-child
+                                margin-right: 0
+                & > .col-7
+                    width: 100%
+        .iphone
+            .img
+                width: 50%
+            .glide
+                top: 12.3%
+                left: 11.1%
+                width: 78%

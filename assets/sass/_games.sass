@@ -83,7 +83,6 @@
                 .availability,
                 .join-btn
                     +font-size(20px)
-                    font-weight: 300
                     float: left
                     margin-right: 1rem
                 .time
@@ -111,3 +110,56 @@
                     .month
                         +font-size(18px)
                         font-weight: 300
+    +bp('max-width: 1000px')
+        .wrapper
+            & > .row
+                & > .col-5
+                    width: 100%
+                    .calendar
+                        width: rem(364px)
+                        margin: 0 auto
+                & > .col-7
+                    width: 100%
+                    .games
+                        width: 80%
+                        margin: 0 auto
+    +bp('max-width: 768px')
+        .wrapper
+            & > .row
+                & > .col-7
+                    width: 100%
+                    .games
+                        width: 100%
+    +bp('max-width: 659px')
+        .wrapper
+            & > .row
+                & > .col-7
+                    width: 100%
+                    .games
+                        .game
+                            .content
+                                padding: 1rem
+                                text-align: center
+                                .date
+                                    display: none
+                                .time
+                                    width: 100%
+                                .teams
+                                    width: 100%
+                                .availability
+                                    width: 100%
+                                .join-btn
+                                    float: none
+                                    margin-top: 1rem
+    +bp('max-width: 450px')
+        .wrapper
+            & > .row
+                & > .col-5
+                    width: 100%
+                    .calendar
+                        width: 100%
+                        & > .row
+                            & > .col-1
+                                padding: .5rem 0
+                            & > .col-10
+                                padding: .5rem 0

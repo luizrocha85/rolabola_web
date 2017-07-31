@@ -60,7 +60,9 @@
                 overflow: hidden
                 margin-bottom: 1rem
                 box-shadow: 0 15px 10px -10px rgba($black,.35)
+                background: linear-gradient(rgba($white, 1), rgba($black, 1))
                 .img
+                    +opacity(.8)
                     width: 100%
             .location
                 margin-bottom: .5rem
@@ -80,3 +82,9 @@
                     +font-size(16px)
                     font-family: $din-light
                     color: $gray
+    +bp('max-width: 768px')
+        .col-3
+            width: 50%
+    +bp('max-width: 540px')
+        .col-3
+            width: 100%

@@ -35,3 +35,17 @@
             margin-right: .8rem
             &:last-child
                 margin-right: 0
+    +bp('max-width: 800px')
+        .wrapper
+            & > .row
+                & > .col-3
+                    width: 50%
+                & > .col-2
+                    width: 50%
+    +bp('max-width: 468px')
+        .wrapper
+            & > .row
+                & > .col-3
+                    width: 100%
+                & > .col-2
+                    width: 100%
