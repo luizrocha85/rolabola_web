@@ -416,7 +416,8 @@ img {
   position: relative;
   padding-top: 10rem;
   padding-bottom: 5rem;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  height: 100vh; }
   #hero:before {
     position: absolute;
     content: '';
@@ -430,7 +431,7 @@ img {
     display: block;
     position: absolute;
     content: '';
-    bottom: -25px;
+    bottom: .5rem;
     right: calc(50% - 30px);
     width: 60px;
     height: 60px;
@@ -511,7 +512,8 @@ img {
         border-radius: 0.21429rem;
         background: rgba(255, 255, 255, 0.2);
         color: #FFFFFF;
-        padding: .5rem 1rem; }
+        padding: .5rem 1rem;
+        text-decoration: none; }
         #hero .content .watch-video .watch-btn:hover {
           cursor: pointer;
           background: rgba(255, 255, 255, 0.35);
