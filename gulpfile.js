@@ -7,8 +7,12 @@ var gulp         = require('gulp'),
     notify       = require('gulp-notify');
 
 gulp.task('styles', function() {
-    return gulp.src('assets/sass/master.sass')
+    return gulp.src([
+                'assets/sass/master.sass',
+                'node_modules/glidejs/dist/css/glide.core.min.css'
+            ])
             .pipe(sass().on('error', sass.logError))
+            .pipe(concat('master.css'))
             .pipe(autoprefixer())
             .pipe(gulp.dest('public/css'))
             .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
@@ -19,6 +23,7 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
     return gulp.src([
                 'node_modules/jquery/dist/jquery.min.js',
+                'node_modules/glidejs/dist/glide.min.js',
                 'assets/js/scripts.js'
             ])
             .pipe(concat('scripts.js'))
