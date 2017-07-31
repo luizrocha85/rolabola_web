@@ -100,4 +100,35 @@ $(function(){
             keyboard: false
         });
     }
+
+    // Modal
+    var modal = $('.modal');
+    if(modal.length){
+        var layer = $('.layer'),
+            trigger = $('.trigger-modal');
+
+        function open_modal(id){
+            var modal = $('#'+id);
+            layer.fadeIn();
+            modal.fadeIn();
+        }
+
+        function close_modal(){
+            layer.fadeOut();
+            modal.fadeOut();
+        }
+
+        trigger.click(function(){
+            var $this = $(this),
+                id = $this.data('modal');
+            open_modal(id);
+            return false;
+        });
+
+        $body.on('click', '.close-modal', function(){
+            close_modal();
+        });
+
+    }
+
 });
