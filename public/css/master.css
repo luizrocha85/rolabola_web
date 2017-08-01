@@ -1267,6 +1267,62 @@ img {
     #footer .wrapper > .row > .col-2 {
       width: 100%; } }
 
+@-webkit-keyframes authin {
+  from {
+    visibility: hidden;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transform: scale(0.9) translateY(4rem);
+            transform: scale(0.9) translateY(4rem); }
+  to {
+    visibility: visible;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0); } }
+
+@keyframes authin {
+  from {
+    visibility: hidden;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transform: scale(0.9) translateY(4rem);
+            transform: scale(0.9) translateY(4rem); }
+  to {
+    visibility: visible;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0); } }
+
+@-webkit-keyframes authformin {
+  from {
+    visibility: hidden;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transform: translateY(4rem);
+            transform: translateY(4rem); }
+  to {
+    visibility: visible;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes authformin {
+  from {
+    visibility: hidden;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transform: translateY(4rem);
+            transform: translateY(4rem); }
+  to {
+    visibility: visible;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
 #auth {
   padding: 7rem 0 5rem 0; }
   #auth .bg {
@@ -1282,6 +1338,9 @@ img {
             transform: scale(1.2);
     z-index: -1; }
   #auth .content {
+    -webkit-animation: authin .4s ease-in-out forwards;
+            animation: authin .4s ease-in-out forwards;
+    background: #FFFFFF;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1292,17 +1351,28 @@ img {
     width: 57.14286rem;
     margin: 0 auto;
     position: relative; }
-    #auth .content .onboarding {
+    #auth .content .signup-onboarding {
       background: -webkit-gradient(linear, left top, left bottom, from(rgba(92, 191, 16, 0.3)), to(rgba(44, 99, 5, 0.2))), url("../img/onboarding-1.jpg") no-repeat center center/cover;
       background: linear-gradient(rgba(92, 191, 16, 0.3), rgba(44, 99, 5, 0.2)), url("../img/onboarding-1.jpg") no-repeat center center/cover;
       -webkit-box-align: stretch;
           -ms-flex-align: stretch;
               align-items: stretch;
       -ms-flex-preferred-size: 30%;
-          flex-basis: 30%;
-      position: relative;
-      z-index: 3; }
+          flex-basis: 30%; }
+    #auth .content .signin-onboarding {
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(92, 191, 16, 0.3)), to(rgba(44, 99, 5, 0.2))), url("../img/onboarding-2.jpg") no-repeat right center/cover;
+      background: linear-gradient(rgba(92, 191, 16, 0.3), rgba(44, 99, 5, 0.2)), url("../img/onboarding-2.jpg") no-repeat right center/cover;
+      -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch;
+      -ms-flex-preferred-size: 30%;
+          flex-basis: 30%; }
     #auth .content .form-wrapper {
+      visibility: hidden;
+      filter: alpha(opacity=0);
+      opacity: 0;
+      -webkit-animation: authformin .6s ease-in-out forwards;
+              animation: authformin .6s ease-in-out forwards;
       background: url("../img/auth-form-bg.png") no-repeat right bottom, #FCFCFC;
       -webkit-box-align: stretch;
           -ms-flex-align: stretch;
@@ -1386,13 +1456,14 @@ img {
                   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2); }
           #auth .content .form-wrapper .auth-form .form-group .submit-btn:hover {
             cursor: pointer; }
-      #auth .content .form-wrapper .auth-form .terms {
+      #auth .content .form-wrapper .auth-form .terms,
+      #auth .content .form-wrapper .auth-form .forgot {
         font-size: 16px;
         font-size: 1.14286rem;
         font-family: "DIN Regular";
-        color: #697475;
-        margin-top: 3rem; }
-        #auth .content .form-wrapper .auth-form .terms .link {
+        color: #697475; }
+        #auth .content .form-wrapper .auth-form .terms .link,
+        #auth .content .form-wrapper .auth-form .forgot .link {
           color: #5CBF10;
           text-decoration: underline; }
 
