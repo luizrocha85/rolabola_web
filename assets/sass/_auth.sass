@@ -16,6 +16,7 @@
 
 #auth
     padding: 7rem 0 5rem 0
+    min-height: calc(100vh - 200px)
     .bg
         position: fixed
         background: url('../img/auth-bg.jpg') no-repeat center center / cover
@@ -44,6 +45,10 @@
             background: linear-gradient(rgba($light-green, .3), rgba($dark-green, .2)), url('../img/onboarding-2.jpg') no-repeat right center / cover
             align-items: stretch
             flex-basis: 30%
+        .forgot-password-onboarding
+            background: linear-gradient(rgba($light-green, .3), rgba($dark-green, .2)), url('../img/onboarding-3.jpg') no-repeat center center / cover
+            align-items: stretch
+            flex-basis: 30%
         .form-wrapper
             +opacity(0)
             animation: authformin .6s ease-in-out forwards
@@ -59,6 +64,12 @@
                 .link
                     color: $light-green
                     text-decoration: underline
+            .subtitle
+                +font-size(18px)
+                font-family: $din-light
+                color: $dark-gray
+                margin-bottom: 2rem
+                line-height: 1.5
             .options
                 +clear
                 list-style: none

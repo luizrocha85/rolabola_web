@@ -1324,7 +1324,8 @@ img {
             transform: translateY(0); } }
 
 #auth {
-  padding: 7rem 0 5rem 0; }
+  padding: 7rem 0 5rem 0;
+  min-height: calc(100vh - 200px); }
   #auth .bg {
     position: fixed;
     background: url("../img/auth-bg.jpg") no-repeat center center/cover;
@@ -1367,6 +1368,14 @@ img {
               align-items: stretch;
       -ms-flex-preferred-size: 30%;
           flex-basis: 30%; }
+    #auth .content .forgot-password-onboarding {
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(92, 191, 16, 0.3)), to(rgba(44, 99, 5, 0.2))), url("../img/onboarding-3.jpg") no-repeat center center/cover;
+      background: linear-gradient(rgba(92, 191, 16, 0.3), rgba(44, 99, 5, 0.2)), url("../img/onboarding-3.jpg") no-repeat center center/cover;
+      -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch;
+      -ms-flex-preferred-size: 30%;
+          flex-basis: 30%; }
     #auth .content .form-wrapper {
       visibility: hidden;
       filter: alpha(opacity=0);
@@ -1389,6 +1398,13 @@ img {
         #auth .content .form-wrapper .title .link {
           color: #5CBF10;
           text-decoration: underline; }
+      #auth .content .form-wrapper .subtitle {
+        font-size: 18px;
+        font-size: 1.28571rem;
+        font-family: "DIN Light";
+        color: #697475;
+        margin-bottom: 2rem;
+        line-height: 1.5; }
       #auth .content .form-wrapper .options {
         clear: both;
         content: '';
