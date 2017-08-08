@@ -418,7 +418,7 @@ img {
   padding-top: 10rem;
   padding-bottom: 5rem;
   color: #FFFFFF;
-  height: 100vh; }
+  min-height: 100vh; }
   #hero:before {
     position: absolute;
     content: '';
@@ -463,101 +463,117 @@ img {
         #hero #scroll-btn.up {
           right: 1rem;
           bottom: 1rem; } }
-  #hero .iphone {
-    -webkit-animation: float 2.3s ease-in-out infinite;
-            animation: float 2.3s ease-in-out infinite;
-    position: relative;
-    text-align: center;
-    z-index: 3; }
-    #hero .iphone .img {
-      max-width: 100%; }
-  #hero .content {
-    position: relative;
-    z-index: 3; }
-    #hero .content .row .col-6 {
-      padding: 0; }
-    #hero .content > .title {
-      font-size: 43px;
-      font-size: 3.07143rem;
-      font-family: "DIN Light";
-      margin-bottom: 1rem; }
-    #hero .content .text {
-      font-size: 22px;
-      font-size: 1.57143rem;
-      font-family: "DIN Light";
-      margin-bottom: 8rem; }
-    #hero .content .download .title {
-      font-size: 20px;
-      font-size: 1.42857rem;
-      font-family: "DIN Regular";
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: .5rem; }
-    #hero .content .download .download-badges {
-      clear: both;
-      content: '';
-      display: table;
-      list-style: none; }
-      #hero .content .download .download-badges .download-badge {
-        float: left; }
-        #hero .content .download .download-badges .download-badge:first-child {
-          margin-right: 1rem; }
-    #hero .content .watch-video {
-      padding-top: 1rem; }
-      #hero .content .watch-video .watch-btn {
-        font-size: 18px;
-        font-size: 1.28571rem;
+  #hero .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 85.71429rem;
+    z-index: 2; }
+    @media only screen and (max-width: 1200px) {
+      #hero .center {
+        position: relative;
+        top: 0;
+        left: 0;
+        -webkit-transform: translate(0);
+                transform: translate(0);
+        width: 100%; } }
+    #hero .center .iphone {
+      -webkit-animation: float 2.3s ease-in-out infinite;
+              animation: float 2.3s ease-in-out infinite;
+      position: relative;
+      text-align: center;
+      z-index: 3; }
+      #hero .center .iphone .img {
+        max-width: 100%; }
+    #hero .center .content {
+      position: relative;
+      z-index: 3; }
+      #hero .center .content .row .col-6 {
+        padding: 0; }
+      #hero .center .content > .title {
+        font-size: 43px;
+        font-size: 3.07143rem;
+        font-family: "DIN Light";
+        margin-bottom: 1rem; }
+      #hero .center .content .text {
+        font-size: 22px;
+        font-size: 1.57143rem;
+        font-family: "DIN Light";
+        margin-bottom: 8rem; }
+      #hero .center .content .download .title {
+        font-size: 20px;
+        font-size: 1.42857rem;
         font-family: "DIN Regular";
-        display: inline-block;
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        border-radius: 0.21429rem;
-        background: rgba(255, 255, 255, 0.2);
-        color: #FFFFFF;
-        padding: .5rem 1rem;
-        text-decoration: none; }
-        #hero .content .watch-video .watch-btn:hover {
-          cursor: pointer;
-          background: rgba(255, 255, 255, 0.35);
-          -webkit-transition: background .2s ease-in-out;
-          transition: background .2s ease-in-out; }
-        #hero .content .watch-video .watch-btn .img {
-          margin-right: .5rem; }
-        #hero .content .watch-video .watch-btn span {
-          position: relative;
-          top: 2px; }
-  @media only screen and (max-width: 978px) {
-    #hero .content > .title {
-      font-size: 34px;
-      font-size: 2.42857rem; }
-    #hero .content .text {
-      margin-bottom: 2rem; }
-    #hero .content .row .col-6 {
-      width: 100%; }
-    #hero .content .download {
-      margin-bottom: 2rem; } }
-  @media only screen and (max-width: 900px) {
-    #hero .wrapper > .row > .col-4 {
-      width: 100%; }
-    #hero .wrapper > .row > .col-8 {
-      width: 100%; }
-    #hero .content {
-      text-align: center; }
-      #hero .content .row .col-6 {
-        width: 50%; }
-      #hero .content > .title {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: .5rem; }
+      #hero .center .content .download .download-badges {
+        clear: both;
+        content: '';
+        display: table;
+        list-style: none; }
+        #hero .center .content .download .download-badges .download-badge {
+          float: left; }
+          #hero .center .content .download .download-badges .download-badge:first-child {
+            margin-right: 1rem; }
+      #hero .center .content .watch-video {
+        padding-top: 1rem; }
+        #hero .center .content .watch-video .watch-btn {
+          font-size: 18px;
+          font-size: 1.28571rem;
+          font-family: "DIN Regular";
+          display: inline-block;
+          border: 2px solid rgba(255, 255, 255, 0.3);
+          border-radius: 0.21429rem;
+          background: rgba(255, 255, 255, 0.2);
+          color: #FFFFFF;
+          padding: .5rem 1rem;
+          text-decoration: none; }
+          #hero .center .content .watch-video .watch-btn:hover {
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.35);
+            -webkit-transition: background .2s ease-in-out;
+            transition: background .2s ease-in-out; }
+          #hero .center .content .watch-video .watch-btn .img {
+            margin-right: .5rem; }
+          #hero .center .content .watch-video .watch-btn span {
+            position: relative;
+            top: 2px; }
+    @media only screen and (max-width: 978px) {
+      #hero .center .content > .title {
         font-size: 34px;
         font-size: 2.42857rem; }
-      #hero .content .text {
-        margin-bottom: 3rem; }
-      #hero .content .download {
-        margin-bottom: 0; }
-        #hero .content .download .download-badges {
-          margin: 0 auto; } }
-  @media only screen and (max-width: 595px) {
-    #hero .content .row .col-6 {
-      width: 100%; }
-    #hero .content .download {
-      margin-bottom: 2rem; } }
+      #hero .center .content .text {
+        margin-bottom: 2rem; }
+      #hero .center .content .row .col-6 {
+        width: 100%; }
+      #hero .center .content .download {
+        margin-bottom: 2rem; } }
+    @media only screen and (max-width: 900px) {
+      #hero .center .wrapper > .row > .col-4 {
+        width: 100%; }
+      #hero .center .wrapper > .row > .col-8 {
+        width: 100%; }
+      #hero .center .content {
+        text-align: center; }
+        #hero .center .content .row .col-6 {
+          width: 50%; }
+        #hero .center .content > .title {
+          font-size: 34px;
+          font-size: 2.42857rem; }
+        #hero .center .content .text {
+          margin-bottom: 3rem; }
+        #hero .center .content .download {
+          margin-bottom: 0; }
+          #hero .center .content .download .download-badges {
+            margin: 0 auto; } }
+    @media only screen and (max-width: 595px) {
+      #hero .center .content .row .col-6 {
+        width: 100%; }
+      #hero .center .content .download {
+        margin-bottom: 2rem; } }
 
 #bgvid {
   position: fixed;
