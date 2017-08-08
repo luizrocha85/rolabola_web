@@ -53,35 +53,7 @@
                     animation: arrowin .3s ease-in-out forwards
                     display: block
                     pointer-events: none
-        .field
-            .photo
-                border-radius: rem(3px)
-                height: rem(150px)
-                overflow: hidden
-                margin-bottom: 1rem
-                box-shadow: 0 15px 10px -10px rgba($black,.35)
-                background: linear-gradient(rgba($white, 1), rgba($black, 1))
-                .img
-                    +opacity(.8)
-                    width: 100%
-            .location
-                margin-bottom: .5rem
-                .img
-                    margin-right: .2rem
-                    margin-top: -.5rem
-                h4
-                    +font-size(18px)
-                    font-family: $din-regular
-                    display: inline-block
-                    color: $medium-green
-            .times
-                .img
-                    margin-right: .2rem
-                    margin-top: -.3rem
-                span
-                    +font-size(16px)
-                    font-family: $din-light
-                    color: $gray
+        +field
     +bp('max-width: 768px')
         .col-3
             width: 50%

@@ -1,0 +1,112 @@
+#app
+    display: flex
+    padding-top: rem(70px)
+    min-height: 100vh
+    .results
+        align-items: stretch
+        flex-basis: rem(600px)
+        padding: 2rem
+        padding-top: 12rem
+        position: relative
+        z-index: 2
+        max-height: calc(100vh - #{rem(70px)})
+        overflow-y: auto
+        .search
+            background: $white
+            position: fixed
+            top: rem(69px)
+            left: 0
+            width: rem(600px)
+            z-index: 2
+            padding: 1rem 2rem 0 2rem
+            box-shadow: 0 2px 4px 0 rgba($black,.15)
+            .search-form
+                .search-query
+                    position: relative
+                    .query
+                        +font-size(16px)
+                        font-family: $din-regular
+                        color: $dark-green
+                        border: 0
+                        border-radius: rem(3px)
+                        background: #f8f8f8
+                        padding: .8rem 4.5rem .8rem 1rem
+                        width: 100%
+                        &:focus
+                            box-shadow: 0 2px 4px 0 rgba($black,.15)
+                            transition: all .3s ease-in-out
+                    .submit
+                        background: $light-green
+                        border: 0
+                        border-radius: 0 3px 3px 0
+                        position: absolute
+                        top: 0
+                        right: 0
+                        bottom: 0
+                        padding: 0 1.3rem
+                        &:hover
+                            cursor: pointer
+                .filters
+                    +clear
+                    list-style: none
+                    .filter
+                        +font-size(14px)
+                        float: left
+                        color: $dark-green
+                        border-radius: rem(3px)
+                        margin-right: 1rem
+                        position: relative
+                        &:last-child
+                            margin-right: 0
+                        &:hover,
+                        &.active
+                            background: #f8f8f8
+                            transition: all .3s ease-in-out
+                        span
+                            display: block
+                            padding: 1rem
+                            &:hover
+                                cursor: pointer
+                            .img
+                                transition: all .3s ease-in-out
+                        &.active
+                            .controls
+                                display: block
+                            span
+                                .img
+                                    transform: rotate(180deg)
+                        .controls
+                            display: none
+                            background: $white
+                            box-shadow: 0 2px 8px 0 rgba($black,.15)
+                            border-radius: rem(3px)
+                            position: absolute
+                            top: 100%
+                            left: 0
+                            padding: 1rem 1.5rem
+                            z-index: 5
+                            white-space: nowrap
+                            .submit
+                                padding: .5rem 0
+                                margin-top: .5rem
+                                .apply
+                                    +font-size(14px)
+                                    font-family: $din-regular
+                                    border: 0
+                                    border-radius: rem(3px)
+                                    background: $light-green
+                                    color: $white
+                                    padding: .5rem .8rem
+                                    &:hover
+                                        cursor: pointer
+        .fields
+            list-style: none
+            +field
+    .map
+        align-items: stretch
+        flex-basis: calc(100% - #{rem(600px)})
+        position: relative
+        max-height: calc(100vh - #{rem(70px)})
+        #map
+            width: 100%
+            height: 100%

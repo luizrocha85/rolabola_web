@@ -24,6 +24,7 @@ gulp.task('scripts', function() {
     return gulp.src([
                 'node_modules/jquery/dist/jquery.min.js',
                 'node_modules/glidejs/dist/glide.min.js',
+                'node_modules/gmaps/gmaps.min.js',
                 'assets/js/scripts.js'
             ])
             .pipe(concat('scripts.js'))
