@@ -8,8 +8,10 @@ var gulp         = require('gulp'),
 
 gulp.task('styles', function() {
     return gulp.src([
-                'assets/sass/master.sass',
-                'node_modules/glidejs/dist/css/glide.core.min.css'
+                'node_modules/glidejs/dist/css/glide.core.min.css',
+                'node_modules/ion-rangeslider/css/ion.rangeSlider.css',
+                'node_modules/ion-rangeslider/css/ion.rangeSlider.skinModern.css',
+                'assets/sass/master.sass'
             ])
             .pipe(sass().on('error', sass.logError))
             .pipe(concat('master.css'))
@@ -25,6 +27,7 @@ gulp.task('scripts', function() {
                 'node_modules/jquery/dist/jquery.min.js',
                 'node_modules/glidejs/dist/glide.min.js',
                 'node_modules/gmaps/gmaps.min.js',
+                'node_modules/ion-rangeslider/js/ion.rangeSlider.min.js',
                 'assets/js/scripts.js'
             ])
             .pipe(concat('scripts.js'))

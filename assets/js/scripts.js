@@ -428,4 +428,9 @@ $(function(){
         $(this).toggleClass('active');
     });
 
+    var ionSimple = $('.ion-simple');
+    ionSimple.ionRangeSlider({
+        type: "single"
+    });
+
 });
