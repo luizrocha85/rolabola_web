@@ -326,17 +326,61 @@ img {
     list-style: none; }
     #nav .menu .option {
       float: left;
-      margin-right: 2rem;
-      margin-top: .8rem; }
+      margin-right: 2rem; }
       #nav .menu .option:last-child {
         margin-right: 0; }
       #nav .menu .option:first-child {
         margin-top: 0; }
-      #nav .menu .option .link {
+      #nav .menu .option > .link {
         font-size: 16px;
         font-size: 1.14286rem;
         font-weight: 300;
-        text-decoration: none; }
+        text-decoration: none;
+        margin-top: .8rem;
+        display: inline-block; }
+      #nav .menu .option .user {
+        position: relative; }
+        #nav .menu .option .user .photo {
+          width: 2.57143rem;
+          height: 2.57143rem;
+          border-radius: 50%;
+          overflow: hidden;
+          display: inline-block;
+          margin-right: .2rem; }
+          #nav .menu .option .user .photo .img {
+            width: 100%; }
+        #nav .menu .option .user .down {
+          position: relative;
+          top: -1rem; }
+        #nav .menu .option .user:hover {
+          cursor: pointer; }
+        #nav .menu .option .user.active .user-options {
+          display: block; }
+        #nav .menu .option .user .user-options {
+          display: none;
+          list-style: none;
+          background: #FFFFFF;
+          -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+                  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+          border-radius: 0.21429rem;
+          position: absolute;
+          top: 100%;
+          right: 0;
+          z-index: 5;
+          white-space: nowrap; }
+          #nav .menu .option .user .user-options .user-option {
+            -webkit-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out; }
+            #nav .menu .option .user .user-options .user-option .link {
+              font-size: 16px;
+              font-size: 1.14286rem;
+              text-decoration: none;
+              display: block;
+              padding: .8rem 1.5rem; }
+            #nav .menu .option .user .user-options .user-option:hover {
+              background: #f8f8f8;
+              -webkit-transition: all .3s ease-in-out;
+              transition: all .3s ease-in-out; }
 
 @media only screen and (max-width: 767px) {
   #nav {
