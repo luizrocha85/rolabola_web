@@ -423,4 +423,9 @@ $(function(){
         filter.toggleClass('active');
     });
 
+    var user = $('.user');
+    user.click(function(){
+        $(this).toggleClass('active');
+    });
+
 });

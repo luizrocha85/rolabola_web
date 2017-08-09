@@ -49,15 +49,56 @@
         .option
             float: left
             margin-right: 2rem
-            margin-top: .8rem
             &:last-child
                 margin-right: 0
             &:first-child
                 margin-top: 0
-            .link
+            & > .link
                 +font-size(16px)
                 font-weight: 300
                 text-decoration: none
+                margin-top: .8rem
+                display: inline-block
+            .user
+                position: relative
+                .photo
+                    width: rem(36px)
+                    height: rem(36px)
+                    border-radius: 50%
+                    overflow: hidden
+                    display: inline-block
+                    margin-right: .2rem
+                    .img
+                        width: 100%
+                .down
+                    position: relative
+                    top: -1rem
+                &:hover
+                    cursor: pointer
+                &.active
+                    .user-options
+                        display: block
+                .user-options
+                    display: none
+                    list-style: none
+                    background: $white
+                    box-shadow: 0 2px 8px 0 rgba($black,.15)
+                    border-radius: rem(3px)
+                    position: absolute
+                    top: 100%
+                    right: 0
+                    z-index: 5
+                    white-space: nowrap
+                    .user-option
+                        transition: all .3s ease-in-out
+                        .link
+                            +font-size(16px)
+                            text-decoration: none
+                            display: block
+                            padding: .8rem 1.5rem
+                        &:hover
+                            background: #f8f8f8
+                            transition: all .3s ease-in-out
 +bp('max-width: 767px')
     #nav
         display: none
