@@ -9,7 +9,7 @@
     </head>
     <body>
 
-        <section id="top" class="scrolled">
+        <section id="top" class="white">
             <div class="wrapper">
                 <div class="row">
                     <div class="col-2">
@@ -76,6 +76,23 @@
         <section id="app">
             <div class="results">
                 <div class="search">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="actions">
+                                <li class="action">
+                                    <a href="#" class="btn btn-green">Crear juego</a>
+                                </li>
+                                <!-- /.action -->
+                                <li class="action">
+                                    <a href="#" class="btn btn-green">Quiero jugar</a>
+                                </li>
+                                <!-- /.action -->
+                            </ul>
+                            <!-- /.actions -->
+                        </div>
+                        <!-- /.col-12 -->
+                    </div>
+                    <!-- /.row -->
                     <form action="" class="search-form">
                         <div class="row">
                             <div class="col-12">
@@ -92,9 +109,9 @@
                             <div class="col-12">
                                 <ul class="filters">
                                     <li class="filter">
-                                        <span>Rango en km <img src="img/filter-caret-down.png" alt="" class="img"></span>
+                                        <span>Distancia <img src="img/filter-caret-down.png" alt="" class="img"></span>
                                         <div class="controls">
-                                            <input type="text" class="distance ion-simple">
+                                            <input type="text" class="distance ion-distance">
                                             <div class="submit">
                                                 <button class="apply">Aplicar</button>
                                             </div>
@@ -104,22 +121,30 @@
                                     </li>
                                     <!-- /.filter -->
                                     <li class="filter">
-                                        <span>Tipo de cancha <img src="img/filter-caret-down.png" alt="" class="img"></span>
+                                        <span>Cancha <img src="img/filter-caret-down.png" alt="" class="img"></span>
                                         <div class="controls">
                                             <div class="check">
-                                                <input type="checkbox"> Pasto
+                                                <input type="checkbox" id="pasto">
+                                                <label for="pasto" class="label"></label>
+                                                Pasto
                                             </div>
                                             <!-- /.check -->
                                             <div class="check">
-                                                <input type="checkbox"> Sintético
+                                                <input type="checkbox" id="sintetico">
+                                                <label for="sintetico" class="label"></label>
+                                                Sintético
                                             </div>
                                             <!-- /.check -->
                                             <div class="check">
-                                                <input type="checkbox"> Concreto
+                                                <input type="checkbox" id="concreto">
+                                                <label for="concreto" class="label"></label>
+                                                Concreto
                                             </div>
                                             <!-- /.check -->
                                             <div class="check">
-                                                <input type="checkbox"> Otros materiales
+                                                <input type="checkbox" id="otros">
+                                                <label for="otros" class="label"></label>
+                                                Otros materiales
                                             </div>
                                             <!-- /.check -->
                                             <div class="submit">
@@ -131,9 +156,55 @@
                                     </li>
                                     <!-- /.filter -->
                                     <li class="filter">
-                                        <span>Rango de precio <img src="img/filter-caret-down.png" alt="" class="img"></span>
+                                        <span>Precio <img src="img/filter-caret-down.png" alt="" class="img"></span>
                                         <div class="controls">
-                                            <input type="text" class="distance ion-simple">
+                                            <input type="text" class="price ion-price">
+                                            <div class="submit">
+                                                <button class="apply">Aplicar</button>
+                                            </div>
+                                            <!-- /.submit -->
+                                        </div>
+                                        <!-- /.controls -->
+                                    </li>
+                                    <!-- /.filter -->
+                                    <li class="filter">
+                                        <span>Horario <img src="img/filter-caret-down.png" alt="" class="img"></span>
+                                        <div class="controls">
+                                            <input type="text" class="time ion-time">
+                                            <div class="submit">
+                                                <button class="apply">Aplicar</button>
+                                            </div>
+                                            <!-- /.submit -->
+                                        </div>
+                                        <!-- /.controls -->
+                                    </li>
+                                    <!-- /.filter -->
+                                    <li class="filter">
+                                        <span>Fecha <img src="img/filter-caret-down.png" alt="" class="img"></span>
+                                        <div class="controls">
+                                            <div class="input-group input-daterange">
+                                                <input type="text" class="form-control" value="2017-08-11">
+                                                <div class="input-group-addon">a</div>
+                                                <input type="text" class="form-control" value="2017-08-20">
+                                            </div>
+                                            <div class="submit">
+                                                <button class="apply">Aplicar</button>
+                                            </div>
+                                            <!-- /.submit -->
+                                        </div>
+                                        <!-- /.controls -->
+                                    </li>
+                                    <!-- /.filter -->
+                                    <li class="filter">
+                                        <span>Juego <img src="img/filter-caret-down.png" alt="" class="img"></span>
+                                        <div class="controls">
+                                            <select name="juego" class="select">
+                                                <option value="publico-individual">Público - Individual</option>
+                                                <option value="publico-equipo">Público - Equipo</option>
+                                                <option value="privado-individual">Privado - Individual</option>
+                                                <option value="privado-equipo">Privado - Equipo</option>
+                                                <option value="privado-completa">Privado - Completa</option>
+                                            </select>
                                             <div class="submit">
                                                 <button class="apply">Aplicar</button>
                                             </div>
