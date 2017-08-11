@@ -428,9 +428,30 @@ $(function(){
         $(this).toggleClass('active');
     });
 
-    var ionSimple = $('.ion-simple');
-    ionSimple.ionRangeSlider({
-        type: "single"
+    var ionDistance = $('.ion-distance');
+    ionDistance.ionRangeSlider({
+        min: 1,
+        max: 12,
+        postfix: 'km'
+    });
+
+    var ionPrice = $('.ion-price');
+    ionPrice.ionRangeSlider({
+        min: 500,
+        max: 3500,
+        prefix: '$'
+    });
+
+    var ionTime = $('.ion-time');
+    ionTime.ionRangeSlider({
+        min: 7,
+        max: 23,
+        postfix: ':00hrs',
+        type: 'double'
+    });
+
+    $('.input-daterange input').each(function() {
+        $(this).datepicker('clearDates');
     });
 
 });

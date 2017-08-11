@@ -11,6 +11,7 @@ gulp.task('styles', function() {
                 'node_modules/glidejs/dist/css/glide.core.min.css',
                 'node_modules/ion-rangeslider/css/ion.rangeSlider.css',
                 'node_modules/ion-rangeslider/css/ion.rangeSlider.skinModern.css',
+                'node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css',
                 'assets/sass/master.sass'
             ])
             .pipe(sass().on('error', sass.logError))
@@ -28,6 +29,7 @@ gulp.task('scripts', function() {
                 'node_modules/glidejs/dist/glide.min.js',
                 'node_modules/gmaps/gmaps.min.js',
                 'node_modules/ion-rangeslider/js/ion.rangeSlider.min.js',
+                'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
                 'assets/js/scripts.js'
             ])
             .pipe(concat('scripts.js'))

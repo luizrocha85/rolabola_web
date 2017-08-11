@@ -20,6 +20,14 @@
             z-index: 2
             padding: 1rem 2rem 0 2rem
             box-shadow: 0 2px 4px 0 rgba($black,.15)
+            .actions
+                +clear
+                list-style: none
+                .action
+                    float: left
+                    margin-right: 2rem
+                    &:last-child
+                        margin-right: 0
             .search-form
                 .search-query
                     position: relative
@@ -54,7 +62,7 @@
                         float: left
                         color: $dark-green
                         border-radius: rem(3px)
-                        margin-right: 1rem
+                        margin-right: 0rem
                         position: relative
                         &:last-child
                             margin-right: 0
@@ -62,9 +70,9 @@
                         &.active
                             background: #f8f8f8
                             transition: all .3s ease-in-out
-                        span
+                        & > span
                             display: block
-                            padding: 1rem
+                            padding: 1rem .95rem
                             &:hover
                                 cursor: pointer
                             .img
@@ -83,10 +91,27 @@
                             position: absolute
                             top: 100%
                             left: 0
-                            padding: 1rem 1.5rem
+                            padding: 2rem 1.5rem 1rem 1.5rem
                             z-index: 5
                             white-space: nowrap
-                            width: 400px
+                            width: 300px
+                            .select
+                                +font-size(16px)
+                                width: 100%
+                            .check
+                                +font-size(16px)
+                                margin-bottom: 1rem
+                                .label
+                                    display: inline-block
+                                    width: rem(16px)
+                                    height: rem(16px)
+                                    background: url('../img/radio.png') no-repeat center center
+                                    &:hover
+                                        cursor: pointer
+                                input[type="checkbox"]
+                                    display: none
+                                    &:checked + .label
+                                        background: url('../img/radio-check.png') no-repeat center center
                             .submit
                                 padding: .5rem 0
                                 margin-top: .5rem
