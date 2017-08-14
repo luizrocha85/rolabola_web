@@ -28,6 +28,34 @@ $(function(){
         }
     });
 
+    // Counters
+    var counters = $('.counter');
+    if(counters.length){
+
+        var countersVisible = counters.offset().top - $window.outerHeight();
+
+        $window.on('scroll.custom', function () {
+            var height = $window.scrollTop();
+
+            if (countersVisible) {
+                counters.find('.number').each(function(){
+                    var $this = $(this);
+                    $this.prop('Counter', 0).animate({
+                        Counter: $(this).text()
+                    }, {
+                        duration: 2000,
+                        easing: 'swing',
+                        step: function(now){
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
+                });
+
+                $window.off('scroll.custom');
+            }
+        });
+    }
+
     var video_modal = $('#video-modal');
     if(video_modal.length){
       var video = video_modal.find('video');
