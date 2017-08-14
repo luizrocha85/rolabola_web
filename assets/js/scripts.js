@@ -28,6 +28,12 @@ $(function(){
         }
     });
 
+    var video_modal = $('#video-modal');
+    if(video_modal.length){
+      var video = video_modal.find('video');
+      video.get(0).pause();
+    }
+
     var iphone_slides = $('.iphone-slides');
     if(iphone_slides.length){
 
@@ -111,11 +117,14 @@ $(function(){
             var modal = $('#'+id);
             layer.fadeIn();
             modal.fadeIn();
+            if(id == 'video-modal')
+                modal.find('video').get(0).play();
         }
 
         function close_modal(){
             layer.fadeOut();
             modal.fadeOut();
+            modal.find('video').get(0).pause();
         }
 
         trigger.click(function(){
