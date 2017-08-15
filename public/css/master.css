@@ -1849,8 +1849,8 @@ img {
       #games .games .game .content .teams,
       #games .games .game .content .availability,
       #games .games .game .content .join-btn {
-        font-size: 20px;
-        font-size: 1.42857rem;
+        font-size: 16px;
+        font-size: 1.14286rem;
         float: left;
         margin-right: 1rem; }
       #games .games .game .content .time {
@@ -2207,7 +2207,7 @@ img {
     -ms-flex-preferred-size: 42.85714rem;
         flex-basis: 42.85714rem;
     padding: 2rem;
-    padding-top: 12rem;
+    padding-top: 17rem;
     position: relative;
     z-index: 2;
     max-height: calc(100vh - 5rem);
@@ -2218,20 +2218,33 @@ img {
       top: 4.92857rem;
       left: 0;
       width: 42.85714rem;
-      z-index: 2;
+      z-index: 6;
       padding: 1rem 2rem 0 2rem;
       -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
               box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15); }
-      #app .results .search .actions {
+      #app .results .search .tabs {
         clear: both;
         content: '';
         display: table;
-        list-style: none; }
-        #app .results .search .actions .action {
+        list-style: none;
+        border-bottom: 1px solid #ECF0F1;
+        width: 100%; }
+        #app .results .search .tabs .tab {
           float: left;
-          margin-right: 2rem; }
-          #app .results .search .actions .action:last-child {
+          margin-right: 2rem;
+          border-bottom: 2px solid transparent; }
+          #app .results .search .tabs .tab:last-child {
             margin-right: 0; }
+          #app .results .search .tabs .tab .link {
+            font-size: 16px;
+            font-size: 1.14286rem;
+            font-family: "DIN Light";
+            display: inline-block;
+            text-decoration: none;
+            color: #5CBF10;
+            padding: 1rem; }
+          #app .results .search .tabs .tab.active {
+            border-bottom: 2px solid #5CBF10; }
       #app .results .search .search-form .search-query {
         position: relative; }
         #app .results .search .search-form .search-query .query {
@@ -2338,44 +2351,127 @@ img {
                 padding: .5rem .8rem; }
                 #app .results .search .search-form .filters .filter .controls .submit .apply:hover {
                   cursor: pointer; }
-    #app .results .fields {
-      list-style: none; }
-      #app .results .fields .field {
-        display: block;
-        text-decoration: none; }
-        #app .results .fields .field .photo {
-          border-radius: 0.21429rem;
-          height: 10.71429rem;
-          overflow: hidden;
-          margin-bottom: 1rem;
-          -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.35);
-                  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.35);
-          background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
-          background: linear-gradient(white, black); }
-          #app .results .fields .field .photo .img {
-            visibility: visible;
-            filter: alpha(opacity=80);
-            opacity: 0.8;
-            width: 100%; }
-        #app .results .fields .field .location {
-          margin-bottom: .5rem; }
-          #app .results .fields .field .location .img {
+    #app .results .tab-content {
+      display: none; }
+      #app .results .tab-content.active {
+        display: block; }
+      #app .results .tab-content .fields {
+        list-style: none; }
+        #app .results .tab-content .fields .field {
+          display: block;
+          text-decoration: none; }
+          #app .results .tab-content .fields .field .photo {
+            border-radius: 0.21429rem;
+            height: 10.71429rem;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.35);
+                    box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.35);
+            background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+            background: linear-gradient(white, black); }
+            #app .results .tab-content .fields .field .photo .img {
+              visibility: visible;
+              filter: alpha(opacity=80);
+              opacity: 0.8;
+              width: 100%; }
+          #app .results .tab-content .fields .field .location {
+            margin-bottom: .5rem; }
+            #app .results .tab-content .fields .field .location .img {
+              margin-right: .2rem;
+              margin-top: -.5rem; }
+            #app .results .tab-content .fields .field .location h4 {
+              font-size: 18px;
+              font-size: 1.28571rem;
+              font-family: "DIN Regular";
+              display: inline-block;
+              color: #40880A; }
+          #app .results .tab-content .fields .field .times .img {
             margin-right: .2rem;
-            margin-top: -.5rem; }
-          #app .results .fields .field .location h4 {
-            font-size: 18px;
-            font-size: 1.28571rem;
-            font-family: "DIN Regular";
-            display: inline-block;
-            color: #40880A; }
-        #app .results .fields .field .times .img {
-          margin-right: .2rem;
-          margin-top: -.3rem; }
-        #app .results .fields .field .times span {
-          font-size: 16px;
-          font-size: 1.14286rem;
-          font-family: "DIN Light";
-          color: #AFAEB4; }
+            margin-top: -.3rem; }
+          #app .results .tab-content .fields .field .times span {
+            font-size: 16px;
+            font-size: 1.14286rem;
+            font-family: "DIN Light";
+            color: #AFAEB4; }
+      #app .results .tab-content .games .game {
+        position: relative;
+        margin-bottom: 1rem;
+        border-radius: 0.21429rem;
+        overflow: hidden;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#595959), to(black));
+        background-image: linear-gradient(-180deg, #595959 0%, black 100%);
+        -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.35);
+                box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.35); }
+        #app .results .tab-content .games .game:after {
+          background: url("../img/tigres.jpg") center center/cover;
+          position: absolute;
+          content: '';
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 50%;
+          z-index: 2;
+          visibility: visible;
+          filter: alpha(opacity=50);
+          opacity: 0.5; }
+        #app .results .tab-content .games .game:before {
+          background: url("../img/rayados.jpg") center center/cover;
+          position: absolute;
+          content: '';
+          top: 0;
+          left: 50%;
+          height: 100%;
+          width: 50%;
+          z-index: 2;
+          visibility: visible;
+          filter: alpha(opacity=50);
+          opacity: 0.5; }
+        #app .results .tab-content .games .game .content {
+          clear: both;
+          content: '';
+          display: table;
+          color: #FFF;
+          width: 100%;
+          padding: 2rem;
+          position: relative;
+          z-index: 3; }
+          #app .results .tab-content .games .game .content .time,
+          #app .results .tab-content .games .game .content .teams,
+          #app .results .tab-content .games .game .content .availability,
+          #app .results .tab-content .games .game .content .join-btn {
+            font-size: 16px;
+            font-size: 1.14286rem;
+            float: left;
+            margin-right: 1rem; }
+          #app .results .tab-content .games .game .content .time {
+            font-family: "DIN Light";
+            padding-top: .5rem; }
+          #app .results .tab-content .games .game .content .teams {
+            padding-top: .5rem; }
+          #app .results .tab-content .games .game .content .availability {
+            font-size: 16px;
+            font-size: 1.14286rem;
+            font-family: "DIN Light";
+            padding-top: .7rem; }
+          #app .results .tab-content .games .game .content .join-btn {
+            font-size: 16px;
+            font-size: 1.14286rem;
+            background: #5CBF10;
+            padding: .5rem 1rem;
+            margin-right: 0; }
+          #app .results .tab-content .games .game .content .date {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            text-align: center; }
+            #app .results .tab-content .games .game .content .date .day {
+              font-size: 30px;
+              font-size: 2.14286rem;
+              font-weight: 300; }
+            #app .results .tab-content .games .game .content .date .month {
+              font-size: 18px;
+              font-size: 1.28571rem;
+              font-weight: 300; }
   #app .map {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;

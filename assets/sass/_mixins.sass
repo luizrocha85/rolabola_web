@@ -48,3 +48,70 @@
                 +font-size(16px)
                 font-family: $din-light
                 color: $gray
+=game
+    .game
+        position: relative
+        margin-bottom: 1rem
+        border-radius: rem(3px)
+        overflow: hidden
+        background-image: linear-gradient(-180deg, rgba(89,89,89,1) 0%, rgba(0,0,0,1) 100%)
+        box-shadow: 0 15px 10px -10px rgba($black,.35)
+        &:after
+            background: url('../img/tigres.jpg') center center / cover
+            position: absolute
+            content: ''
+            top: 0
+            left: 0
+            height: 100%
+            width: 50%
+            z-index: 2
+            +opacity(.5)
+        &:before
+            background: url('../img/rayados.jpg') center center / cover
+            position: absolute
+            content: ''
+            top: 0
+            left: 50%
+            height: 100%
+            width: 50%
+            z-index: 2
+            +opacity(.5)
+        .content
+            +clear
+            color: #FFF
+            width: 100%
+            padding: 2rem
+            position: relative
+            z-index: 3
+            .time,
+            .teams,
+            .availability,
+            .join-btn
+                +font-size(16px)
+                float: left
+                margin-right: 1rem
+            .time
+                font-family: $din-light
+                padding-top: .5rem
+            .teams
+                padding-top: .5rem
+            .availability
+                +font-size(16px)
+                font-family: $din-light
+                padding-top: .7rem
+            .join-btn
+                +font-size(16px)
+                background: $light-green
+                padding: .5rem 1rem
+                margin-right: 0
+            .date
+                position: absolute
+                top: 1rem
+                right: 1rem
+                text-align: center
+                .day
+                    +font-size(30px)
+                    font-weight: 300
+                .month
+                    +font-size(18px)
+                    font-weight: 300

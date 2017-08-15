@@ -168,6 +168,24 @@ $(function(){
 
     }
 
+    // Tabs
+    var tabs = $('.tabs');
+    if(tabs.length){
+        var tab_contents = $('.tab-content'),
+            tabs = tabs.find('.tab');
+        tabs.find('.link').click(function() {
+            var $this = $(this),
+                tab_id = $this.data('id'),
+                tab = $this.closest('.tab');
+            tab_contents.removeClass('active');
+            $('#'+tab_id).addClass('active');
+            tabs.removeClass('active');
+            tab.addClass('active');
+
+            return false;
+        });
+    }
+
     // Map
     var map = new GMaps({
         el: '#map',

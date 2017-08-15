@@ -6,7 +6,7 @@
         align-items: stretch
         flex-basis: rem(600px)
         padding: 2rem
-        padding-top: 12rem
+        padding-top: 17rem
         position: relative
         z-index: 2
         max-height: calc(100vh - #{rem(70px)})
@@ -17,17 +17,29 @@
             top: rem(69px)
             left: 0
             width: rem(600px)
-            z-index: 2
+            z-index: 6
             padding: 1rem 2rem 0 2rem
             box-shadow: 0 2px 4px 0 rgba($black,.15)
-            .actions
+            .tabs
                 +clear
                 list-style: none
-                .action
+                border-bottom: 1px solid $light-gray
+                width: 100%
+                .tab
                     float: left
                     margin-right: 2rem
+                    border-bottom: 2px solid transparent
                     &:last-child
                         margin-right: 0
+                    .link
+                        +font-size(16px)
+                        font-family: $din-light
+                        display: inline-block
+                        text-decoration: none
+                        color: $light-green
+                        padding: 1rem
+                    &.active
+                        border-bottom: 2px solid $light-green
             .search-form
                 .search-query
                     position: relative
@@ -125,9 +137,15 @@
                                     padding: .5rem .8rem
                                     &:hover
                                         cursor: pointer
-        .fields
-            list-style: none
-            +field
+        .tab-content
+            display: none
+            &.active
+                display: block
+            .fields
+                list-style: none
+                +field
+            .games
+                +game
     .map
         align-items: stretch
         flex-basis: calc(100% - #{rem(600px)})
