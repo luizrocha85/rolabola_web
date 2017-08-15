@@ -968,6 +968,59 @@ img {
         text-decoration: none;
         margin-top: .8rem;
         display: inline-block; }
+      #nav .menu .option .notifications {
+        position: relative; }
+        #nav .menu .option .notifications:hover {
+          cursor: pointer; }
+        #nav .menu .option .notifications.active .list {
+          display: block; }
+        #nav .menu .option .notifications > .img {
+          position: relative;
+          top: .7rem; }
+        #nav .menu .option .notifications .list {
+          display: none;
+          list-style: none;
+          background: #FFFFFF;
+          -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+                  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+          border-radius: 0.21429rem;
+          position: absolute;
+          top: 3rem;
+          right: 0;
+          z-index: 5;
+          width: 21.42857rem; }
+          #nav .menu .option .notifications .list .notification {
+            clear: both;
+            content: '';
+            display: table;
+            -webkit-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+            position: relative;
+            padding: .5rem 0; }
+            #nav .menu .option .notifications .list .notification .link {
+              font-size: 16px;
+              font-size: 1.14286rem;
+              text-decoration: none;
+              display: block;
+              padding: .8rem 1.5rem; }
+            #nav .menu .option .notifications .list .notification:hover {
+              background: #f8f8f8;
+              -webkit-transition: all .3s ease-in-out;
+              transition: all .3s ease-in-out; }
+            #nav .menu .option .notifications .list .notification .icon {
+              float: left;
+              width: 1.71429rem; }
+              #nav .menu .option .notifications .list .notification .icon .photo {
+                border-radius: 50%; }
+            #nav .menu .option .notifications .list .notification .text {
+              float: left;
+              width: calc(100% - 1.71429rem);
+              padding-left: .5rem; }
+              #nav .menu .option .notifications .list .notification .text .time {
+                font-size: 13px;
+                font-size: 0.92857rem;
+                color: #AFAEB4;
+                margin-top: .3rem; }
       #nav .menu .option .user {
         position: relative; }
         #nav .menu .option .user .photo {
