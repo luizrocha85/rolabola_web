@@ -483,6 +483,11 @@ $(function(){
         $(this).toggleClass('active');
     });
 
+    var notifications = $('.notifications');
+    notifications.click(function(){
+        $(this).toggleClass('active');
+    });
+
     var ionDistance = $('.ion-distance');
     ionDistance.ionRangeSlider({
         min: 1,
