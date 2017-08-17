@@ -1,0 +1,101 @@
+#configure-game
+    padding-top: calc(2rem + #{rem(70px)})
+    h1.title
+        +font-size(24px)
+        font-family: $din-regular
+        color: $medium-green
+        text-transform: uppercase
+    +field
+    .title
+        +font-size(20px)
+        font-family: $din-light
+        color: $light-green
+        margin-bottom: 1rem
+    .field-types
+        +clear
+        list-style: none
+        .field-type
+            float: left
+            margin-right: 2rem
+            .label-type
+                display: block
+                width: rem(100px)
+                height: rem(100px)
+                border: 4px solid transparent
+                border-radius: rem(3px)
+                position: relative
+                &:hover
+                    cursor: pointer
+                .name
+                    color: $white
+                    position: absolute
+                    bottom: .2rem
+                    left: 0
+                    width: 100%
+                    padding: .3rem
+                    background: $white
+                    color: $light-green
+                    border-radius: rem(3px)
+                    text-align: center
+            input[type="radio"]
+                display: none
+                &:checked + label
+                    border: 4px solid $light-green
+    .game-modes
+        +clear
+        list-style: none
+        .game-mode
+            float: left
+            margin-right: 2rem
+            .label-mode
+                display: block
+                width: rem(100px)
+                height: rem(100px)
+                border: 4px solid transparent
+                border-radius: rem(3px)
+                position: relative
+                &:hover
+                    cursor: pointer
+                .name
+                    color: $white
+                    position: absolute
+                    bottom: .2rem
+                    left: 0
+                    width: 100%
+                    padding: .3rem
+                    background: $white
+                    color: $light-green
+                    border-radius: rem(3px)
+                    text-align: center
+            input[type="radio"]
+                display: none
+                &:checked + label
+                    border: 4px solid $light-green
+    .teams
+        +clear
+        list-style: none
+        border: 2px solid $light-green
+        border-radius: rem(4px)
+        .team
+            float: left
+            &:first-child
+                border-right: 2px solid $light-green
+            .label-team
+                color: $light-green
+                display: block
+                padding: .5rem 1rem
+            input[type="radio"]
+                display: none
+                &:checked + label
+                    background: $light-green
+                    color: $white
+    input[name="team_name"]
+        +font-size(18px)
+        font-family: $din-regular
+        padding: .5rem 1rem
+        border: 1px solid $gray
+        border-radius: rem(3px)
+        color: $medium-green
+        width: 100%
+        &:focus
+            border: 1px solid $light-green
