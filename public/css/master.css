@@ -2685,16 +2685,19 @@ img {
 
 #settings {
   padding-top: 5rem;
-  min-height: calc(100vh - 14.07143rem); }
+  min-height: calc(100vh - 14.07143rem);
+  background: url("../img/auth-form-bg.png") no-repeat right bottom, #FCFCFC; }
   #settings .sidebar {
-    padding-top: 3rem; }
+    padding-top: 2rem; }
     #settings .sidebar .title {
       font-size: 20px;
       font-size: 1.42857rem;
       font-family: "DIN Regular";
       color: #40880A;
       margin-bottom: 2rem;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      padding-bottom: 1.7rem;
+      border-bottom: 1px solid #ECF0F1; }
     #settings .sidebar .options {
       list-style: none; }
       #settings .sidebar .options .option {
@@ -2714,11 +2717,13 @@ img {
           color: #40880A;
           display: block; }
   #settings .content {
-    padding-top: 2rem; }
+    padding-top: 1rem; }
     #settings .content .title {
       font-size: 28px;
       font-size: 2rem;
-      color: #40880A; }
+      color: #40880A;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #ECF0F1; }
     #settings .content .settings-form .form-group {
       margin-bottom: 1.5rem; }
       #settings .content .settings-form .form-group .photo {
@@ -2757,3 +2762,77 @@ img {
                 box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2); }
         #settings .content .settings-form .form-group .submit-btn:hover {
           cursor: pointer; }
+
+#notifications {
+  padding-top: 5rem;
+  min-height: calc(100vh - 14.07143rem);
+  background: url("../img/auth-form-bg.png") no-repeat right bottom, #FCFCFC; }
+  #notifications .sidebar {
+    padding-top: 2rem; }
+    #notifications .sidebar .title {
+      font-size: 20px;
+      font-size: 1.42857rem;
+      font-family: "DIN Regular";
+      color: #40880A;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      padding-bottom: 1.7rem;
+      border-bottom: 1px solid #ECF0F1; }
+    #notifications .sidebar .options {
+      list-style: none; }
+      #notifications .sidebar .options .option {
+        margin-bottom: 1rem;
+        border-left: 2px solid transparent; }
+        #notifications .sidebar .options .option.active, #notifications .sidebar .options .option:hover {
+          padding-left: .5rem;
+          border-left: 2px solid #5CBF10;
+          -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out; }
+          #notifications .sidebar .options .option.active .link, #notifications .sidebar .options .option:hover .link {
+            color: #5CBF10; }
+        #notifications .sidebar .options .option .link {
+          font-size: 18px;
+          font-size: 1.28571rem;
+          text-decoration: none;
+          color: #40880A;
+          display: block; }
+  #notifications .content {
+    padding-top: 1rem; }
+    #notifications .content .title {
+      font-size: 28px;
+      font-size: 2rem;
+      color: #40880A;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #ECF0F1; }
+    #notifications .content .list {
+      list-style: none; }
+      #notifications .content .list .notification {
+        clear: both;
+        content: '';
+        display: table;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+        position: relative;
+        padding: .5rem 0; }
+        #notifications .content .list .notification .link {
+          font-size: 18px;
+          font-size: 1.28571rem;
+          color: #2C6305;
+          text-decoration: none;
+          display: block;
+          padding: .8rem 1.5rem;
+          padding-left: 0; }
+        #notifications .content .list .notification .icon {
+          float: left;
+          width: 1.71429rem; }
+          #notifications .content .list .notification .icon .photo {
+            border-radius: 50%; }
+        #notifications .content .list .notification .text {
+          float: left;
+          width: calc(100% - 1.71429rem);
+          padding-left: .5rem; }
+          #notifications .content .list .notification .text .time {
+            font-size: 16px;
+            font-size: 1.14286rem;
+            color: #AFAEB4;
+            margin-top: .3rem; }
