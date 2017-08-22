@@ -1,0 +1,68 @@
+#settings
+    padding-top: rem(70px)
+    min-height: calc(100vh - #{rem(197px)})
+    .sidebar
+        padding-top: 3rem
+        .title
+            +font-size(20px)
+            font-family: $din-regular
+            color: $medium-green
+            margin-bottom: 2rem
+            text-transform: uppercase
+        .options
+            list-style: none
+            .option
+                margin-bottom: 1rem
+                border-left: 2px solid transparent
+                &.active,
+                &:hover
+                    padding-left: .5rem
+                    border-left: 2px solid $light-green
+                    transition: all .3s ease-in-out
+                    .link
+                        color: $light-green
+                .link
+                    +font-size(18px)
+                    text-decoration: none
+                    color: $medium-green
+                    display: block
+    .content
+        padding-top: 2rem
+        .title
+            +font-size(28px)
+            color: $medium-green
+        .settings-form
+            .form-group
+                margin-bottom: 1.5rem
+                .photo
+                    border-radius: rem(3px)
+                    width: rem(128px)
+                    height: rem(128px)
+                    overflow: hidden
+                    margin-top: .5rem
+                    margin-bottom: .5rem
+                    .img
+                        width: 100%
+                .label
+                    +font-size(14px)
+                    font-family: $din-regular
+                    color: $dark-gray
+                    text-transform: uppercase
+                    display: block
+                .input
+                    +font-size(18px)
+                    font-family: $din-regular
+                    padding: .5rem 0
+                    color: $dark-gray
+                    border: 0
+                    border-bottom: 1px solid $gray
+                    background: none
+                    display: block
+                    width: 100%
+                    &:focus
+                        border-bottom: 1px solid $light-green
+                        transition: all .3s ease-in-out
+                .submit-btn
+                    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2)
+                    &:hover
+                        cursor: pointer
