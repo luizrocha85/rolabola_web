@@ -2687,6 +2687,20 @@ img {
   padding-top: 5rem;
   min-height: calc(100vh - 14.07143rem);
   background: url("../img/auth-form-bg.png") no-repeat right bottom, #FCFCFC; }
+  #settings .header {
+    width: 100%;
+    height: 10.71429rem;
+    background: url("../img/header-bg.jpg") no-repeat center center/cover;
+    position: relative; }
+    #settings .header:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)), to(rgba(0, 0, 0, 0.6)));
+      background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.6)); }
   #settings .sidebar {
     padding-top: 2rem; }
     #settings .sidebar .title {
@@ -2767,6 +2781,20 @@ img {
   padding-top: 5rem;
   min-height: calc(100vh - 14.07143rem);
   background: url("../img/auth-form-bg.png") no-repeat right bottom, #FCFCFC; }
+  #notifications .header {
+    width: 100%;
+    height: 10.71429rem;
+    background: url("../img/header-bg.jpg") no-repeat center center/cover;
+    position: relative; }
+    #notifications .header:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.2)), to(rgba(0, 0, 0, 0.6)));
+      background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.6)); }
   #notifications .sidebar {
     padding-top: 2rem; }
     #notifications .sidebar .title {
