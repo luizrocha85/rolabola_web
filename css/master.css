@@ -1344,7 +1344,8 @@ img {
   padding: 10em 0; }
   #counters .counter {
     text-align: center;
-    color: #40880A; }
+    color: #40880A;
+    background: #ECF0F1; }
     #counters .counter .icon {
       margin-bottom: 1rem;
       height: 2.85714rem; }
