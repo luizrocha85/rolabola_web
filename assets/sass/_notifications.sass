@@ -49,30 +49,32 @@
             color: $medium-green
             padding-bottom: 1rem
             border-bottom: 1px solid $light-gray
-        .list
-            list-style: none
-            .notification
-                +clear
-                transition: all .3s ease-in-out
-                position: relative
-                padding: .5rem 0
+        .notification
+            +clear
+            +font-size(18px)
+            position: relative
+            color: $dark-green
+            text-decoration: none
+            margin-bottom: 1.5rem
+            .icon
+                float: left
+                width: rem(24px)
+                .photo
+                    border-radius: 50%
+            .text
+                float: left
+                width: calc(100% - #{rem(24px)})
+                padding-left: .5rem
                 .link
-                    +font-size(18px)
-                    color: $dark-green
+                    +font-size(16px)
                     text-decoration: none
-                    display: block
-                    padding: .8rem 1.5rem
-                    padding-left: 0
-                .icon
-                    float: left
-                    width: rem(24px)
-                    .photo
-                        border-radius: 50%
-                .text
-                    float: left
-                    width: calc(100% - #{rem(24px)})
-                    padding-left: .5rem
-                    .time
-                        +font-size(16px)
-                        color: $gray
-                        margin-top: .3rem
+                    &:hover
+                        text-decoration: underline
+                    &.accept
+                        color: $light-green
+                    &.reject
+                        color: $red
+                .time
+                    +font-size(16px)
+                    color: $gray
+                    margin-top: .3rem

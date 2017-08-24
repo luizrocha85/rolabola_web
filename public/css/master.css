@@ -996,13 +996,16 @@ img {
             -webkit-transition: all .3s ease-in-out;
             transition: all .3s ease-in-out;
             position: relative;
-            padding: .5rem 0; }
+            padding: .5rem 0;
+            width: 100%; }
             #nav .menu .option .notifications .list .notification .link {
               font-size: 16px;
               font-size: 1.14286rem;
               text-decoration: none;
               display: block;
               padding: .8rem 1.5rem; }
+              #nav .menu .option .notifications .list .notification .link.all {
+                text-align: center; }
             #nav .menu .option .notifications .list .notification:hover {
               background: #f8f8f8;
               -webkit-transition: all .3s ease-in-out;
@@ -2526,6 +2529,8 @@ img {
               font-size: 18px;
               font-size: 1.28571rem;
               font-weight: 300; }
+      #app .results .tab-content .games .game {
+        margin-bottom: 0; }
   #app .map {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
@@ -2747,9 +2752,22 @@ img {
         height: 9.14286rem;
         overflow: hidden;
         margin-top: .5rem;
-        margin-bottom: .5rem; }
+        margin-bottom: .5rem;
+        margin-right: 1rem; }
         #settings .content .settings-form .form-group .photo .img {
           width: 100%; }
+      #settings .content .settings-form .form-group .btn-file {
+        position: relative;
+        overflow: hidden; }
+        #settings .content .settings-form .form-group .btn-file .input-file {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+          opacity: 0;
+          filter: alpha(opacity=0); }
       #settings .content .settings-form .form-group .label {
         font-size: 14px;
         font-size: 1rem;
@@ -2772,6 +2790,21 @@ img {
           border-bottom: 1px solid #5CBF10;
           -webkit-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out; }
+      #settings .content .settings-form .form-group .btn-facebook {
+        font-size: 16px;
+        font-size: 1.14286rem;
+        font-family: "DIN Light";
+        display: inline-block;
+        background: #3B5998;
+        color: #FFFFFF;
+        text-decoration: none;
+        padding: .7rem 1rem .5rem 1rem;
+        border-radius: 0.21429rem;
+        -webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+                box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2); }
+        #settings .content .settings-form .form-group .btn-facebook .img {
+          margin-top: -2px;
+          margin-right: .5rem; }
       #settings .content .settings-form .form-group .submit-btn {
         -webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
                 box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2); }
@@ -2833,35 +2866,37 @@ img {
       color: #40880A;
       padding-bottom: 1rem;
       border-bottom: 1px solid #ECF0F1; }
-    #notifications .content .list {
-      list-style: none; }
-      #notifications .content .list .notification {
-        clear: both;
-        content: '';
-        display: table;
-        -webkit-transition: all .3s ease-in-out;
-        transition: all .3s ease-in-out;
-        position: relative;
-        padding: .5rem 0; }
-        #notifications .content .list .notification .link {
-          font-size: 18px;
-          font-size: 1.28571rem;
-          color: #2C6305;
-          text-decoration: none;
-          display: block;
-          padding: .8rem 1.5rem;
-          padding-left: 0; }
-        #notifications .content .list .notification .icon {
-          float: left;
-          width: 1.71429rem; }
-          #notifications .content .list .notification .icon .photo {
-            border-radius: 50%; }
-        #notifications .content .list .notification .text {
-          float: left;
-          width: calc(100% - 1.71429rem);
-          padding-left: .5rem; }
-          #notifications .content .list .notification .text .time {
-            font-size: 16px;
-            font-size: 1.14286rem;
-            color: #AFAEB4;
-            margin-top: .3rem; }
+    #notifications .content .notification {
+      clear: both;
+      content: '';
+      display: table;
+      font-size: 18px;
+      font-size: 1.28571rem;
+      position: relative;
+      color: #2C6305;
+      text-decoration: none;
+      margin-bottom: 1.5rem; }
+      #notifications .content .notification .icon {
+        float: left;
+        width: 1.71429rem; }
+        #notifications .content .notification .icon .photo {
+          border-radius: 50%; }
+      #notifications .content .notification .text {
+        float: left;
+        width: calc(100% - 1.71429rem);
+        padding-left: .5rem; }
+        #notifications .content .notification .text .link {
+          font-size: 16px;
+          font-size: 1.14286rem;
+          text-decoration: none; }
+          #notifications .content .notification .text .link:hover {
+            text-decoration: underline; }
+          #notifications .content .notification .text .link.accept {
+            color: #5CBF10; }
+          #notifications .content .notification .text .link.reject {
+            color: #e74c3c; }
+        #notifications .content .notification .text .time {
+          font-size: 16px;
+          font-size: 1.14286rem;
+          color: #AFAEB4;
+          margin-top: .3rem; }
